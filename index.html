@@ -6,21 +6,41 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.0.0/umd/react.development.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.0.0/umd/react-dom.development.js"></script>
+        <script src="flashcardData.js"></script>
+        
         <link rel="stylesheet" type="text/css" href="index.css"></link>
     </head>
     <body>
         <div id="app"></div>
 
         <script type='text/babel'>
-            var cardData = {
-                front: {
-                    question: 'You may know that React was created at ________.',
-                    hint: 'This company\'s site is known for being written in PHP.'
-                }
-            };
+            const cardData = importedFlashCardDataFile;
             
             
             class App extends React.Component {
+                constructor() {
+                    super();
+                    this.state = {
+                        cardData: []
+                    };
+                }
+
+                componentDidMount() {
+                    this.setState({ cardData: cardData });
+                }
+
+                shuffleBackward = () => {
+                    const { cardData } = this.state;
+                    const newCardData = [cardData[6], ...cardData.slice(0, 6)];
+                    this.setState({ cardData: newCardData });
+                }
+
+                shuffleForward = () => {
+                    const { cardData } = this.state;
+                    const newCardData = [...cardData.slice(1), cardData[0]];
+                    this.setState({ cardData: newCardData });
+                }
+
                 render() {
                     return (
                         <div className='App'>
@@ -31,28 +51,51 @@
                                 An interactive flashcard app.
                             </p>
                             <div className='card-list'>
-                                {Card(cardData)}
+                                {this.state.cardData.map((card, index) => <Card key={index} front={card.front} index={index} />)}
+                            </div>
+                            <div className='buttons'>
+                                <button onClick={() => this.shuffleBackward()}>
+                                    &lt;
+                                </button>
+                                <button onClick={() => this.shuffleForward()}>
+                                    &gt;
+                                </button>
                             </div>
                         </div>       
                     );
                 }  
             }
 
-            var Card = function(props) {
-                return (
-                    <div className='Card -front'>
-                        <div className='front'>
-                            <h3 className='question'>
-                                {props.front.question}    
-                            </h3>
-                            <p className='hint'>
-                                <span>Hint:</span> 
-                                {props.front.hint}
-                            </p>
+            class Card extends React.Component {
+                constructor() {
+                    super();
+                    this.state = {
+                        flipped: false
+                    };
+                }
+
+                flipCard = () => {
+                    if (this.props.index === 0) {
+                        this.setState({ flipped: !this.state.flipped });
+                    }
+                }
+
+                render() {
+                    return (
+                        <div className='Card -front' onClick={() => this.flipCard()}>
+                            <div className='front'>
+                                <h3 className='question'>
+                                    {this.props.front.question}    
+                                </h3>
+                                <p className='hint'>
+                                    <span>Hint:</span> 
+                                    {this.props.front.hint}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                );
-            };
+                    );
+                }
+            }
 
       ReactDOM.render(<App />, document.getElementById('app'));
         </script>
