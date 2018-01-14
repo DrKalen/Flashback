@@ -13,16 +13,14 @@
 
      * When the user clicks on the top card, it flips to show the back.
 
-![SCREENSHOT](./images/Flashback2.png)
-
      * On the back are the answer to the question on the front of the card and a colorful image 
      to build engagement and improve user experience.
 
+![SCREENSHOT](./images/Flashcard_flip.png)
+
      * Buttons below the pile of cards move ahead or back one card. 
 
-![SCREENSHOT](./images/Flashback3.png)
-
-![SCREENSHOT](./images/Flashback4.png)
+![SCREENSHOT](./images/Flashcard_advance.png)
 
      * All navigation is fully inuitive: users do not need "Instructions" to know how to use the app.
 
