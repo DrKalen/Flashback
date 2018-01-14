@@ -16,13 +16,15 @@
      * On the back are the answer to the question on the front of the card and a colorful image 
      to build engagement and improve user experience.
 
-![SCREENSHOT](./images/Flashcard_flip.gif)
+![SCREENSHOT](./images/Flashback_flip.gif)
 
      * Buttons below the pile of cards move ahead or back one card. 
 
-![SCREENSHOT](./images/Flashcard_advance.gif)
+![SCREENSHOT](./images/Flashback_advance.gif)
 
      * All navigation is fully inuitive: users do not need "Instructions" to know how to use the app.
+
+![SCREENSHOT](./images/Flashback_advance_and_flip.gif)
 
 * Technology:
      * Content is rendered to an HTML page.
