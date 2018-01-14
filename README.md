@@ -35,4 +35,5 @@
 
      * Images are stored with the program files.
 
-     * The program is wrapped in php for easier deployment.
+     * A tutorial for building the app is available from TheFirehoseProject.com
+
