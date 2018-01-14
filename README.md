@@ -1,4 +1,4 @@
-![SCREENSHOT](./master/images/Flashback.png)
+![SCREENSHOT](./images/Flashback.png)
 
 * The challenge: Create an app that would enable users to learn basic facts about React in an engaging, interesting way.
 
@@ -11,7 +11,7 @@
      
      * When the user clicks on the top card, it flips to show the back.
 
-![SCREENSHOT](/master/images/Flashback2.png)
+![SCREENSHOT](./images/Flashback2.png)
 
      * On the back are the answer to the question on the front of the card and a colorful image to build engagement and improve user experience.
 
@@ -21,7 +21,7 @@
 
 ![SCREENSHOT](./images/Flashback4.png)
 
-     * All navigation is fulluy inuitive: users do not need "Instructions" to know how to use the app.
+     * All navigation is fully inuitive: users do not need "Instructions" to know how to use the app.
 
 * Technology:
      * Content is rendered to an HTML page.
