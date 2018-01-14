@@ -15,7 +15,8 @@
 
 ![SCREENSHOT](./images/Flashback2.png)
 
-     * On the back are the answer to the question on the front of the card and a colorful image to build engagement and improve user experience.
+     * On the back are the answer to the question on the front of the card and a colorful image 
+     to build engagement and improve user experience.
 
      * Buttons below the pile of cards move ahead or back one card. 
 
