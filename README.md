@@ -1,14 +1,16 @@
-![SCREENSHOT](./images/Flashback.png)
+(See screenshots below.)
 
 * The challenge: Create an app that would enable users to learn basic facts about React in an engaging, interesting way.
 
-* The solution: A React-based card which presents a series of flash cards, each with a question about react on the front of the card and the answer on the back of the card.
+* The solution: A dynamic React-based app which presents a series of flash cards, each with a question about ReactJS on the front of the card and the answer on the back of the card.
 
 * Features:
      *  Cards appear initially spread out in a pile with only the top card readable, to engage user curiosity ("What's on the other cards?").
 
      * The front of each card shows a question and a hint to help the user answer the question (and further build user interest).
      
+![SCREENSHOT](./images/Flashback.png)
+
      * When the user clicks on the top card, it flips to show the back.
 
 ![SCREENSHOT](./images/Flashback2.png)
